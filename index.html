@@ -1114,6 +1114,27 @@
 
         });
     </script>
+
+    <script>
+document.addEventListener("click", function(e) {
+
+    const isSearchBtn =
+        e.target.id === "searchButton" ||
+        e.target.classList.contains("btn-search") ||
+        e.target.closest("#searchButton") ||
+        e.target.closest(".btn-search");
+
+    if (isSearchBtn) {
+        console.log("🔎 Botón BUSCAR detectado ➜ Redirigiendo a flys.html");
+
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
+        window.location.href = "flys.html";
+    }
+});
+</script>
+
    
     
 
